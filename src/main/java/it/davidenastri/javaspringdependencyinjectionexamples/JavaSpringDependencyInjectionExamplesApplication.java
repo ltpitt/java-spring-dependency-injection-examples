@@ -15,8 +15,9 @@ public class JavaSpringDependencyInjectionExamplesApplication {
 
 		ApplicationContext ctx = SpringApplication.run(JavaSpringDependencyInjectionExamplesApplication.class, args);
 		MyController myController = (MyController) ctx.getBean("myController");
-		String greeting = myController.sayHello();
-		System.out.println("From main: " + greeting);
+
+		System.out.println("\n----- Primary Bean");
+		System.out.println(myController.sayHello());
 
 		System.out.println("\n----- Property injected dependency");
 		PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");
