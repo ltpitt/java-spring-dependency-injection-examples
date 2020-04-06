@@ -1,11 +1,8 @@
 package it.davidenastri.javaspringdependencyinjectionexamples.controllers;
 
-import it.davidenastri.javaspringdependencyinjectionexamples.services.GreetingServiceImpl;
+import it.davidenastri.javaspringdependencyinjectionexamples.services.ConstructorInjectedGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.stereotype.Controller;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class PropertyInjectedControllerTest {
     // Least preferred method to perform Dependency Injection in Spring
@@ -14,7 +11,7 @@ class PropertyInjectedControllerTest {
     @BeforeEach
     void setUp() {
         controller = new PropertyInjectedController();
-        controller.greetingService = new GreetingServiceImpl();
+        controller.greetingService = new ConstructorInjectedGreetingService();
     }
 
     @Test
