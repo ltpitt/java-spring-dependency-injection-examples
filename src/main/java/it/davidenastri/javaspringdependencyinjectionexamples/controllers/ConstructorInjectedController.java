@@ -1,15 +1,14 @@
 package it.davidenastri.javaspringdependencyinjectionexamples.controllers;
 
 import it.davidenastri.javaspringdependencyinjectionexamples.services.GreetingService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 @Controller
 public class ConstructorInjectedController {
 
-    @Autowired
     private final GreetingService greetingService;
 
+    // Constructors do not longer need @Autowired in Spring
     public ConstructorInjectedController(GreetingService greetingService) {
         this.greetingService = greetingService;
     }
