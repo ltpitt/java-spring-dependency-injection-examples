@@ -2,6 +2,7 @@ package it.davidenastri.javaspringdependencyinjectionexamples;
 
 import it.davidenastri.javaspringdependencyinjectionexamples.controllers.*;
 import it.davidenastri.javaspringdependencyinjectionexamples.examplebeans.FakeDataSource;
+import it.davidenastri.javaspringdependencyinjectionexamples.examplebeans.FakeJmsBroker;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -36,6 +37,11 @@ public class JavaSpringDependencyInjectionExamplesApplication {
 		System.out.println("\n----- FakeDataSource reading the datasource.properties properties");
 		FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class);
 		System.out.println(fakeDataSource);
+
+		System.out.println("\n----- FakeDataSource reading the jms.properties properties");
+		FakeJmsBroker fakeJmsBroker = (FakeJmsBroker) ctx.getBean(FakeJmsBroker.class);
+		System.out.println(fakeJmsBroker);
+
 
 	}
 
