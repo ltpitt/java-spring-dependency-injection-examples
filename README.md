@@ -13,7 +13,7 @@
 
 ## Meta
 
-Davide Nastri – [@pitto](https://davidenastri.it) – d.nastri@gmail.com
+Davide Nastri – d.nastri@gmail.com
 
 See ``LICENSE`` for more information.
 
